@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+// Breakpoints
+$breakpoints: (
+  mobile: 576px,
+  desktop: 1440px,
+);
+
+// Colors
+$primary-base: hsl(225, 100%, 94%);
+$primary-bright: hsl(245, 75%, 52%);
+$primary-bright-shadow: hsla(245, 75%, 52%, 20%);
+$neutral-light: hsl(225, 100%, 98%);
+$neutral-dark: hsl(224, 23%, 55%);
+$neutral-dark-shadow: hsl(224, 23%, 55%, 20%);
+$neutral-darker: hsl(223, 47%, 23%);
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  color: $neutral-dark;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: 900;
+  color: $neutral-darker;
+}
+
+@mixin media-mobile {
+  @media (max-width: map-get($breakpoints, "mobile")) {
+    @content;
+  }
+}
